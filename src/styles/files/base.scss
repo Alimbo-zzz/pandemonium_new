@@ -1,0 +1,92 @@
+html {
+  height: 100%;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  // убирает синий фон при клике на кнопку (mobile)
+}
+
+body {
+  height: 100%;
+  font-size: 16px;
+  font-family: tahoma, verdana;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img{
+  display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+input,
+select,
+button { outline: none; }
+
+a{
+	text-decoration: none;
+}
+
+
+.mainContent{
+  min-width: 320px;
+}
+
+
+
+.container {
+  margin: 0 auto;
+  max-width: $desktop;
+  width: 96%;
+  height: 100%;
+}
+
+
+// _______media
+
+
+// 
+// @media (max-width: $desktop) {
+//   body{ font-size: 0.95em;}
+// 	.container{	max-width:$laptop;}
+// }
+// @media (max-width: $laptop) {
+//   body{ font-size: 0.9em;}
+// 	.container{	max-width:$tablet;}
+// }
+// @media (max-width: $tablet) {
+//   body{ font-size: 0.85em;}
+// 	.container{	max-width:$phone;	}
+// }
+// @media (max-width: $phone) {
+//   body{ font-size: 0.85em;}
+// }

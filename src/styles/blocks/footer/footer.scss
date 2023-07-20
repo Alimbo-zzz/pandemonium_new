@@ -1,0 +1,29 @@
+.footer{
+	padding: 2em 0;
+
+	@media (max-width: $phone) {
+		text-align: center;
+	}
+
+
+	.socials{
+		margin: 0;
+		margin-bottom: 1em;
+
+		@media (max-width: $phone) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.text{
+		margin-bottom: 2em;
+		&:last-child{
+			text-align: right;
+			@media (max-width: $phone) {
+				text-align: center;
+			}
+		}
+	}
+}

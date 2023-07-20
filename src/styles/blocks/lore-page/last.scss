@@ -1,0 +1,46 @@
+.lore-last{
+	text-align: center;
+
+	padding-bottom: 6em;
+
+	.container{
+		position: relative;
+	}
+
+	.btn{
+		max-width: 15em;
+		text-align: center;
+		margin: 8em auto;
+		margin-top: 6em;
+	}
+
+
+	.page-btns_home{
+		float: right;
+		position: relative;
+		font-size: 1.2em;
+		transform: translateX(-100%);
+
+		@media (max-width: $tablet) {
+			position: absolute;
+			right: 0;bottom: 0;
+			transform: translate(0%, 7em);
+		}
+
+		img{
+			position: absolute;
+			user-select: none;
+			object-fit: contain;
+			right: 0;bottom: 0;
+			transform: translate(120%, 100%);
+
+			@media (max-width: $tablet) {
+				transform: translate(-50%, 100%);
+			}
+		}
+	}
+
+
+
+
+}

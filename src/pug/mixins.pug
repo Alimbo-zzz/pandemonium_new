@@ -1,0 +1,14 @@
+div
+  mixin svg(svg_name)
+    svg()&attributes(attributes)
+      use(xlink:href= `./assets/icons/svg/sprite.svg#${svg_name}`)
+        
+        
+  mixin icon(icon_name)
+    svg()&attributes(attributes)
+      use(xlink:href= `./assets/icons/ico/sprite.svg#${icon_name}`)
+  
+  
+  
+  
+  

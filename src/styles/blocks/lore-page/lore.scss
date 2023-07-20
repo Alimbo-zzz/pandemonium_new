@@ -1,0 +1,14 @@
+.lore{
+	min-height: 100vh;
+	overflow: hidden;
+
+	&-text{
+		font-weight: lighter;
+		font-family: Montserrat;
+	}
+	&-text._bold{
+		font-weight: bold;
+		letter-spacing: 0.1em;
+		font-family: Montserrat;
+	}
+}

@@ -1,0 +1,23 @@
+.page.FAQ{
+	.s_FAQ-how{
+		.text{margin: 0;}
+	}
+}
+
+.s_FAQ-how{
+	background: linear-gradient(86.12deg, rgba(92, 58, 153, 0.2) 6.08%, #3A5199 39.43%);
+}
+
+.FAQ-how{
+	max-width: 45em;
+	margin: 0 auto;
+	text-align: center;
+
+	.title{color:$white;}
+	.text{color:$white;}
+
+	._red{color:#DB5252;}
+	&__box{
+		margin-bottom: 2em;
+	}
+}

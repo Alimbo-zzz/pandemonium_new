@@ -1,0 +1,32 @@
+.lore-first{
+	height: 100vh;
+	min-height: 600px;
+
+	&__intro{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__logo{
+		width: 50%;	height: 50%;
+		margin-bottom: 3em;
+		background: url('../resources/icons/svg_1.svg') no-repeat center center;
+		background-size: contain;
+
+		@media (max-width: $phone) {
+			width: 100%;
+		}
+	}
+
+	.title{
+		text-align: center;
+		max-width: 33em;
+
+		@media (max-width: $phone) {
+			font-size: 0.9em;
+		}
+	}
+}

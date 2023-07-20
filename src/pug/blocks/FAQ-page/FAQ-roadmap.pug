@@ -1,0 +1,21 @@
+section._sec.s_FAQ-roadmap
+	.container
+		h4(class="lng-FAQ-roadmap-title_1").title._grad Как зарегистрироваться?
+		.FAQ-roadmap
+			each el, i in FAQ_roadmap
+				.road(data-aos)
+					.road__block
+						each text, idx in el.text
+							if el.text.length > 1
+								p(class=`lng-FAQ-roadmap_road_${i+1}_${idx+1}`).text #{text}
+							else
+								p(class=`lng-FAQ-roadmap_road_${i+1}`).text #{text}
+					.hr
+
+					.point(style=`background: linear-gradient(125deg, ${el.colors._1} 0%, ${el.colors._2} 100%);`)
+						.point__index #{i+1}
+		
+		p.text
+			span(class="lng-FAQ-roadmap-text_1")._bold Готово! В этом и заключается одно из главных преимуществ блокчейна WAX – простота создания аккаунта.
+		
+		.hr

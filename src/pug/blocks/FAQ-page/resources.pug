@@ -1,0 +1,37 @@
+section.s_FAQ-resources._sec
+	.container
+		.FAQ-resources
+			h2(class="lng-FAQ-resources-title_1").title._grad Resources
+			.FAQ-resources__box
+				each el, i in FAQ_resources_1
+					p(class=`lng-FAQ-resources-text-${i+1}`).text #{el}
+			.hr
+			.FAQ-resources__box
+				h4(class="lng-FAQ-resources-title_2").title._grad Возможные проблемы и их решения
+				p(class="lng-FAQ-resources-text_1").text Независимо от количества просмотренных туториалов, вы можете столкнуться с совершенно неожиданной сложностью. Здесь главное не паниковать и не спешить бросаться гаджетами в стену. Рассмотрим самые частые проблемы пользователей:
+			.FAQ-resources__box
+				h5(class="lng-FAQ-resources-title_3").title Проблемы с входом.
+				p(class="lng-FAQ-resources-text_2").text Итак, вы пытаетесь залогиниться в WAX Cloud Wallet, но страница вcё время обновляется, а загрузка не происходит.
+				h6(class="lng-FAQ-resources-title_4").title._grad Что делать?
+				.FAQ-resources__box._left
+					p(class="lng-FAQ-resources-text_3_1").text Колдовать, как можете. Может сработать что угодно из этого:
+					each el, i in FAQ_resources_2
+						p(class=`lng-FAQ-resources-text_3_${i+2}`).text #{el}
+				p(class="lng-FAQ-resources-text_4").text Если это не дало результатов, заглядываем сюда: https://all-access.wax.io//logout. Когда вы кликнете по этой ссылке, произойдет forced logout, загрузка страницы прекратится, и можно пробовать снова.
+			.hr
+			.FAQ-resources__box
+				h5(class="lng-FAQ-resources-title_5").title Проблемы с ресурсами.
+				p(class="lng-FAQ-resources-text_5").text Нехватка ресурсов — самая распространенная проблема.
+				h6(class="lng-FAQ-resources-title_6").title._grad Что делать?
+				each el, i in FAQ_resources_3
+					h6(class=`lng-FAQ-resources-title_${7+i}`).title._circle #{el.title}
+					each text, text_i in el.text
+						if i == 0
+							p(class=`lng-FAQ-resources-text_${6+text_i}`).text #{text}
+						if i == 1
+							p(class=`lng-FAQ-resources-text_${9+text_i}`).text #{text}
+			.hr
+			.FAQ-resources__box
+				p(class="lng-FAQ-resources-text_12").text Своевременный стейкинг WAXP для расширения емкости ресурсов и покупка дополнительной памяти RAM обеспечит вам комфортное пользование WAX Cloud Wallet, а также удобно и быстрое взаимодействие с маркетплейсами и играми.
+				p(class="lng-FAQ-resources-text_13").text И напоследок: Если вы столкнулись с какой-либо проблемой, и ни одно решение вам не помогает, всегда есть вариант заглянуть в дискорд WAX. Присоединяйтесь, слева будет раздел "questions and help". Проверьте, сталкивались ли другие пользователи с вашей проблемой, и попробуйте применить решение, которое им посоветовали.
+			.hr

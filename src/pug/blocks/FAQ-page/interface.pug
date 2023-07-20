@@ -1,0 +1,17 @@
+section.s_FAQ-interface._sec
+	.container
+		h4(class="lng-FAQ-interface-title").title._grad Интерфейс
+		.FAQ-interface
+			each block, block_i in FAQ_interface
+				.FAQ-interface__block
+					each box, i in block
+						.FAQ-interface__box
+							.FAQ-interface__index #{i+1}
+							each el, el_i in box
+								if block_i == 0 
+									p(class=`lng-FAQ-interface_first_${i+1}_${el_i+1}`).text
+								if block_i == 1
+									p(class=`lng-FAQ-interface_second_${i+1}`).text
+								//- p(class=`lng-FAQ-interface`).text
+								//- 	span._bold #{el.name}
+								//- 	|#{el.value}

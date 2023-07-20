@@ -1,0 +1,33 @@
+.btn-theme{
+	position: absolute;
+	bottom: 2em;left: 2em;
+	width: 5em;height: 5em;
+	border-radius: 50%;
+	background-color: $blue;
+	user-select: none;
+	cursor: pointer;
+	color:$white;
+	transition: 0.3s;
+	z-index: 10000;
+
+	@media (max-width: $tablet) {	
+		bottom: auto;
+		top:10em;
+		font-size: 0.6em;
+	}
+
+	svg{
+		position: absolute;
+		left: 50%;top: 50%;
+		transform: scale(0) translate(-50%, -50%);
+		width: 60%;height: 60%;
+		fill:currentColor;
+		transition: 0.3s;
+
+		&._moon{
+			display: block;
+			transform:  scale(1) translate(-50%, -50%);
+		}
+	}
+
+}

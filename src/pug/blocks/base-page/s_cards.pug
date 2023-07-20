@@ -1,0 +1,44 @@
+section.s_cards
+	.container.cards
+		.cards__head
+			p.text(class="lng-s_card_head") Naiad is the younger demoness of the rivers.It controls the movement of matter. Naiad rules from the waters of the Styx to the Great Lava Flow of the Underworld. She loves good jokes. Attention! Beauty Naiad can burn you with one glance.
+		
+		h2(class="lng-s_card_title_1").title 1-th pack
+
+		.splide#slider-cards_1
+			.splide__track
+				ul.splide__list
+					each el in [1,2,3,4,5]
+						li.splide__slide
+							.card
+								button.flip
+								.front
+									img(src=`./assets/images/pack_1/${el}.png`)
+								.back
+									img(src=`./assets/images/pack_1/${el}.png`)
+									.back__block
+										h5.title name
+										p.text.scroll_1 content 
+		.hr
+
+		h2.title(class="lng-s_card_title_2") 2-th pack
+
+		.splide#slider-cards_2
+			.splide__track
+				ul.splide__list
+					each el in [1,2,3,4,5]
+						li.splide__slide
+							.card
+								button.flip
+								.front
+									img(src=`./assets/images/pack_2/${el}.png`)
+								.back
+									img(src=`./assets/images/pack_2/${el}.png`)
+									.back__block
+										h5.title name
+										p.text.scroll_1 content
+
+		.cards__foot
+			h2.title._grad(class="lng-s_card_foot") You can find more information about magical creatures in our bestiary
+			a( href="#s_intro" class="lng-btn_bestiary page-btns_bestiary").btn._shadow Bestiary
+		.hr

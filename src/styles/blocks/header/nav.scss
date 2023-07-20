@@ -1,0 +1,90 @@
+
+
+
+.nav{
+	position: relative;
+	user-select: none;
+	width: 12em;
+
+	@media (max-width: $laptop) {	font-size: 0.8em;}	
+
+	@media (min-width: $tablet) {
+		&:hover &__list{
+			transform: translate(-50%,100%);
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+
+	@media (max-width: $tablet) {
+		display: none;		
+	}
+
+
+	&__title{
+		display: block;
+		cursor: pointer;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		font-size: 1.3em;
+		text-align: center;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+
+
+		&.lng-btn_nav{
+			padding-right: 1em;
+		}
+
+
+		&::after{
+			content: '⌵';
+			font-weight: bold;
+			position: absolute;
+			font-size: 1em;
+			line-height: 0em;
+			right: 0.2em; top: 45%;
+		}
+	}
+
+
+	&__list{
+		color: #fff;
+		position: absolute;
+		left: 50%;bottom: -0em;
+		transform: translate(-50%,100%);
+		background-color: #333;
+		border-radius: 0.6em;
+		width: 100%;
+		transition: 0.3s;
+		overflow: hidden;
+		transform-origin: center top;
+		border:2px solid;
+		font-family: 'Cinzel-Regular', 'Lora-Regular';
+		transform: translate(-50%,100%) scaleY(0);
+		opacity: 0;
+		pointer-events: none;
+
+		@media (max-width: $tablet) {
+			border: none;
+		}
+	}
+
+	&__link{
+		display: block;
+		padding: 0.5em 2em;
+		color:inherit;
+		font-weight: bold;
+		transition: 0.5s;
+
+		@media (min-width: $tablet) {
+			&:hover{
+				background-color: $hover_color_1;
+				color:#fff;
+				padding-left: 3em;
+			}
+		}
+	}
+}

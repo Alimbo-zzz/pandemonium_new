@@ -1,0 +1,38 @@
+header.header
+	.container
+		a.logo(href='/') 
+			img(src="./resources/icons/svg_1.svg")
+			img(src="./resources/icons/svg_2.svg")._hide
+					
+		.header__block
+			.page-btns
+				a(href="#start" class="lng-btn_home").page-btns_home Main
+				a(href="http://45.76.38.211:5000" class="lng-btn_game") Game
+				a(href="#start" class="lng-btn_lore").page-btns_lore Lore
+				a(href="#start" class="lng-btn_bestiary").page-btns_bestiary bestiary
+				
+			nav.nav
+				div(class="lng-btn_nav").nav__title navigation
+				ul.nav__list
+					each el in navs
+						li.nav__el
+							a(href=`#${el.url}` class=`nav__link lng-btn_${el.text}`)=el.text
+		.header__box
+			.btns-lang
+				button(class="btns-lang__select").head-btn-mini
+					+icon('en')
+				ul.btns-lang__list
+					li(class="lng-btn" data-lang="en").btns-lang__el
+						button
+							+icon('en')
+						span en
+					li(class="lng-btn" data-lang="ru").btns-lang__el
+						button
+							+icon('ru')
+						span ru
+			.raq.head-btn-mini
+				+svg('FAQ')
+		//- include ./base-page/s_intro/socials.pug
+
+		.hamburger
+			span.hamburger__line

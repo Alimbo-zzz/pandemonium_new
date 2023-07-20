@@ -1,0 +1,54 @@
+
+
+.socials{
+	font-size: 3em;
+	margin-left: 2em;
+
+	@media (max-width: $large) {
+		margin-left: 1em;
+	}
+
+	@media (max-width: $laptop) {
+		font-size: 1.8em;
+		margin: 0;
+	}
+
+	&__list{
+		display: flex;
+	}
+
+	&__el{
+		margin-left: 0.3em;
+
+		&:first-child{margin-left: 0;}
+
+		&:hover a{
+			color:#fff;
+			background-color: $blue;
+
+			svg{fill: #fff;}
+		}
+	}
+	
+	a{
+		color:$blue;
+		transition: 0.3s;
+		background-color: #fff;
+		padding: 0.15em;
+		border:0.08em solid;
+		border-radius: 0.3em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	svg{
+		transition: 0.3s;
+		width: 0.8em; height: 0.8em;
+		fill: $blue;
+	}
+
+
+
+}

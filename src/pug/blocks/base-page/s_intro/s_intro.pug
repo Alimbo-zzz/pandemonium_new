@@ -1,0 +1,15 @@
+section.s_intro#s_intro
+	.container.intro
+		.btn-theme
+			+svg('moon')._moon
+			+svg('sun')._sun
+
+		.intro__content
+			.intro__preview
+				+svg('pandemonium').main-title
+				p.text(class="lng-intro_text") Welcome to Pandemonium, a world beyond the valley of the shadow of death. Lands in which there is an endless war for power. It is here that armies of fierce demons and beautiful demonettes clash under the leadership of future lords.
+				a(target="blanck" class="lng-btn_game" href="http://45.76.38.211:5000").btn._shadow Game
+			.intro__images
+				img(src=`./assets/images/main-preview/1.png`).center
+				img(src=`./assets/images/main-preview/2.png`).left
+				img(src=`./assets/images/main-preview/3.png`).right

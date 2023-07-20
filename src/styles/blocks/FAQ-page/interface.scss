@@ -1,0 +1,58 @@
+.s_FAQ-interface{
+
+
+}
+
+
+.FAQ-interface{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	&::before{
+		content: '';
+		position: absolute;
+		left: 50%;top: 0;
+		transform: translateX(-50%);
+		height: 100%; width: 2px;
+		background-color: $blue;
+
+		@media(max-width: $laptop){display: none;}
+	}
+
+	@media(max-width: $laptop){
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__index{
+		font-size: 6em;
+		margin-bottom: 0.2em;
+	}
+
+	&__block{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 30em;
+
+		&:first-child{
+			@media(max-width: $laptop){
+				border: none;
+				border-bottom: 0.1em solid $blue;
+			}
+		}
+
+	}
+
+	&__box{
+		margin-bottom: 2em;
+		display: flex;
+		flex-direction: column;
+
+		.text{
+			margin: 0.5em 0;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+.socials
+	ul.socials__list
+		each el in socials
+			li.socials__el
+				a(href=`${el.url}` target="blanck")
+					+svg(`${el.name}`)

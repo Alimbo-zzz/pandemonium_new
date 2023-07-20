@@ -1,0 +1,34 @@
+.page.FAQ .text{
+	margin: 1.5em 0;
+}
+
+.s_FAQ-resources{
+	.hr{margin: 2em auto;}
+}
+
+
+.FAQ-resources{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__box{
+		max-width: 50em;
+		margin: 0.5em 0;
+
+		&._left{
+			max-width: 32em;
+			margin: 0 auto;
+			.text{text-align: left;}
+		}
+	}
+	.text{text-align: center;}
+
+	._circle{
+		position: relative;
+		&::before{
+			content: '•';
+			margin-right: 0.5em;
+		}
+	}
+}

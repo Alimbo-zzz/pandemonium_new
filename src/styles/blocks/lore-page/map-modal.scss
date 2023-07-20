@@ -1,0 +1,94 @@
+
+/* map-modal */
+
+
+
+.map-modal{
+	position: fixed;
+	left: 0;top: 0;
+	background-color: rgba(0,0,0,0.7);
+	transition: 0.8s;
+	width: 100%;height: 100%;
+	z-index: -1000;
+	opacity: 0;
+	pointer-events: none;
+	overflow: hidden;
+
+	&._active{
+		opacity: 1;
+		z-index: 1000;
+		pointer-events: auto;
+
+		.map-modal__block {transition: 0.8s;	transform: translate(-50%, -50%) scale(1);}
+	}
+
+	&__overlay{
+		position: absolute;
+		left: 0;top: 0;
+		width: 100%;height: 100%;
+		z-index: 2;
+	}
+
+	&__block{		
+		transition: 0.3s;
+		position: absolute;
+		left: 50%;top: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		max-width: 40em; 
+		width: 90%;
+		z-index: 10;
+		background-color: rgba(125,147,215,0.9);
+		color:#fff;
+		border:0.3em solid $blue;
+		border-radius: 1em;
+		padding: 2em;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: $tablet) {
+			padding: 1em;
+			font-size: 0.8em;
+		}
+
+		@media (max-width: $phone) {
+			.scroll_1{
+				overflow: auto;
+				max-height: 50vh;
+			}
+		}
+
+		@media (max-height: 500px) {
+			.scroll_1{
+				overflow: auto;
+				max-height: 40vh;
+			}
+		}
+	}
+
+	.title{
+		margin-bottom: 1em;
+	}
+
+	.btn-more{
+		display: inline-block;
+		user-select: none;
+		cursor: pointer;
+		font-weight: bold;
+		margin-top: 1em;
+		padding-bottom: 0.1em;
+		border-bottom: 1px solid;
+		align-self: flex-end;
+	}
+
+
+	.remove{
+		cursor: pointer;
+		line-height: 1em;
+		position: absolute;
+		right: 0em;top: 0em;
+		padding: 0.4em;
+		font-size: 1.5em;
+	}
+}
+
+

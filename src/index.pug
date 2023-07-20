@@ -1,0 +1,36 @@
+doctype html 
+html(lang="ru-RU")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")  
+    link(rel="icon" href="./resources/icons/icon_2.ico")        
+    title Pandemonium
+ 
+    //- плагины:
+    
+    //- WAX_________
+    script(src="resources/API/polyfill.min.js" defer="")
+    script(src="resources/API/waxjs.js" defer="")
+    
+    //- _____AOS__
+    script(src="resources/API/aos/aos.js" defer="")
+    link(href="resources/API/aos/aos.css" rel="stylesheet")
+    
+    //-__________splide________
+    script(src="resources/API/splide/splide.min.js" defer="")
+    link(href="resources/API/splide/splide.min.css" rel="stylesheet") 
+      
+ 
+    //- _________основа____    
+    link(rel="stylesheet" href="css/main.min.css")
+    script(src="js/main.min.js" defer="")
+
+      
+  body
+    
+    include pug/mixins.pug
+    include pug/vars.pug
+    include pug/main.pug
+  
+  
+  

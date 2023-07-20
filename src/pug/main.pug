@@ -1,0 +1,49 @@
+main(class="mainContent _dark")
+	#start
+
+	include ./blocks/templates/preloading.pug
+	include ./blocks/templates/map-modal.pug
+	//- ______templates
+
+	include ./blocks/header.pug
+		//- ___________header____________
+	.main
+		include ./blocks/templates/bodyDecoration.pug
+
+		.page.game
+			include ./blocks/game-page/first.pug
+			include ./blocks/game-page/train-roadmap.pug
+		.page.lore
+			include ./blocks/lore-page/first.pug
+			include ./blocks/lore-page/about.pug
+			include ./blocks/lore-page/map.pug
+			include ./blocks/lore-page/history.pug
+			include ./blocks/lore-page/last.pug
+		//- ___________________________
+		.page.base
+			include ./blocks/base-page/s_intro/s_intro.pug
+			include ./blocks/base-page/s_gameProcess.pug
+			include ./blocks/templates/hover_img_bg.pug
+			include ./blocks/templates/card_box.pug
+			//- include ./blocks/base-page/s_info.pug
+			include ./blocks/base-page/s_cards.pug
+			//- include ./blocks/base-page/s_roadmap.pug
+			include ./blocks/base-page/s_team.pug
+			include ./blocks/base-page/s_about.pug
+		//- ___________________________
+		.page.bestiary
+			include ./blocks/bestiary-page/first-sec.pug
+			include ./blocks/bestiary-page/bestiary-list.pug
+		//- __________________________
+		.page.FAQ
+			include ./blocks/FAQ-page/first.pug
+			include ./blocks/FAQ-page/FAQ-roadmap.pug
+			include ./blocks/FAQ-page/interface.pug
+			include ./blocks/FAQ-page/how.pug
+			include ./blocks/FAQ-page/resources.pug
+		//- _________footer_______________
+	include ./blocks/footer.pug
+
+
+
+	

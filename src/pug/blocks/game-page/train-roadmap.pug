@@ -1,0 +1,14 @@
+section.s_train-roadmap
+  .train-roadmap#train_roadmap
+    each el, i in train_roadmap      
+      .road(data-aos)
+        .road__block
+          img(class="road__preview" src=`./assets/images/train-roadmap/${el.img}.png`)
+          .roadmap-popup-btn
+            img(src=`./resources/icons/i.svg`)
+          each text in el.en.text
+            p.text=text
+
+        .point(style=`background: linear-gradient(125deg, ${el.colors._1} 0%, ${el.colors._2} 100%);`)
+          .point__index #{i+1}
+  button.btn Играть

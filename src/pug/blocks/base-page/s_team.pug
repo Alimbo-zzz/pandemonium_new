@@ -1,0 +1,18 @@
+section.s_team#s_team
+	//- .hr
+	.container
+		h2(class="lng-s_team_title").title our team
+		.splide.team
+			.splide__track
+				ul.splide__list.team__list
+					each el in [1,2,3,4,5]
+						li.splide__slide
+							.team__el
+								//img(src=`./assets/images/team/${el}.png`)
+								.info
+									.name name
+									p.work work
+									p.text.scroll_1 text
+								button.more
+		.hr
+	

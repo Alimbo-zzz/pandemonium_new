@@ -1,0 +1,146 @@
+.bestiary-first-sec{
+	height: 100vh;
+	min-height: 500px;
+
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	h1{
+		position: relative;
+		z-index: 5;
+		max-width: 24em;
+		margin: 0 auto;
+
+		&.title._l{padding-top: 2em;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.bestiary-intro{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	img{
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__block:first-child{
+		font-size: 1.2em;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		@media (max-width: $tablet) {font-size: 0.9em;	}
+		@media (max-height: 700px) {font-size: 0.9em;	}
+
+		@media (max-width: $phone) {
+			font-size: 0.55em;
+		}
+		._static{
+			position: relative;
+			z-index: 5;
+			width: 16em;height: auto;
+			animation: main_card 5s ease infinite alternate;
+		}
+
+		._absolute{
+			position: absolute;
+			width: 10em;height: auto;
+			top: 50%;
+
+			&:first-child{
+				left: 0;
+				transform: translateX(-70%) rotate(-30deg);
+				animation: left_card 5s ease infinite alternate;
+			}
+			&:last-child{
+				right: 0;
+				transform: translateX(70%) rotate(30deg);
+				animation: right_card 5s ease infinite alternate;
+			}
+
+			z-index: 4;
+		}
+	}
+
+
+	&__block:last-child{
+		position: absolute;
+		width: 130%;height: 100%;
+		z-index: 2;
+		pointer-events: none;
+		user-select: none;
+		display: flex;
+		justify-content: space-between;
+		left: 50%;top: 50%;
+		transform: translate(-50%, -70%);
+
+		@media (max-width: $tablet) {display: none;	}
+
+		img{
+			width: 26em;height: auto;
+			transition: 0.3s;
+			animation: wing_l 3s ease infinite;
+			&:last-child{transform: scaleX(-1); 
+			animation: wing_r 3s ease infinite;}
+		}
+	}
+}
+
+
+
+/* animation */
+
+
+@keyframes wing_r {
+	0%, 100%{
+		filter: opacity(0.5);
+		transform: rotate(0deg) scaleX(-1);
+	}	
+	40%{
+		filter: opacity(1);
+		transform: rotate(-10deg) scaleX(-1);
+	}
+	60%{
+		filter: opacity(0.5);
+	}
+}
+
+
+@keyframes wing_l {
+	0%, 100%{
+		filter: opacity(0.5);
+		transform: rotate(0deg);
+	}	
+	40%{
+		filter: opacity(1);
+		transform: rotate(10deg);
+	}
+	60%{
+		filter: opacity(0.5);
+	}
+}
+
+
+@keyframes main_card {
+	0%,100%{transform: translateY(0);}
+	50%{transform: translateY(-5%);}
+}
+
+@keyframes left_card {
+	0%,100%{transform: translate(-70%, 0) rotate(-30deg);}
+	50%{transform: translate(-80%, -10%) rotate(-30deg);}
+}
+@keyframes right_card {
+	0%,100%{transform: translate(70%, 0) rotate(30deg);}
+	50%{transform: translate(80%, -10%) rotate(30deg);}
+}

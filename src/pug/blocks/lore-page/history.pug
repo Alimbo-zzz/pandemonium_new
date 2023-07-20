@@ -1,0 +1,10 @@
+section._sec.lore-history
+	.container
+		ul.lore-history__list
+			each el in history
+				li(id=`${el.id}`).lore-history__el
+					h3.title._grad=el.en.title
+					.lore-history__block
+						img(src=`./assets/images/map/${el.img}.png`)
+						each text in el.en.text
+							p.lore-text=text 

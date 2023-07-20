@@ -1,0 +1,88 @@
+
+
+ /* ______________btns_lang */
+
+
+
+
+.btns-lang{
+	display: flex;
+	position: relative;
+	color:#fff;
+
+
+	&._active{
+		.btns-lang__list{
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate(-50%, 100%);
+		}
+	}
+
+	button{
+
+		svg{
+			width: 100%;height: 100%;
+			position: absolute;
+			left: 50%;top: 50%;
+			transform: translate(-50%, -50%);
+			user-select: none;
+			pointer-events: none;
+		}
+	}
+
+
+
+	&__list{
+		font-size: 2em;
+		position: absolute;
+		bottom: -0.4em;left: 50%;
+		background-color: #333;
+		border-radius: 0.1em;
+		display: flex;
+		flex-direction: column;
+		transition: 0.3s;
+		box-shadow: 0 0 5px 1px rgba(255,255,255,0.2);
+		border-radius: 0.4em;
+		transform: translate(-50%, 0%) scaleY(0);
+		opacity: 0;
+		pointer-events: none;
+		overflow: hidden;
+
+		span{
+			font-size: 0.9em;
+			margin-left: 0.3em;
+			font-family: montserrat;
+			text-transform: uppercase;
+		}
+
+	}
+
+		&__el{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			user-select: none;
+			transition: 0.3s;
+			padding: 0.1em 0.4em;
+			border-bottom: 0.5px solid rgba(255,255,255,0.2);
+
+			button{
+				background: none;
+				border: none;
+				width: 1.4em; height: 1.2em;
+				position: relative;		
+			}
+
+			&:last-child{
+				border:none;
+			}
+
+			@media (min-width: $tablet) {
+				&:hover{
+					background-color: $hover_color_1;
+				}
+			}
+	}
+}

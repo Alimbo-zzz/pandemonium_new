@@ -1,0 +1,19 @@
+.s_about{
+	text-align: center;
+	padding-bottom: 6em;
+
+	.title{
+		font-size: 1.6em;
+		font-weight: lighter;
+	}
+
+}
+
+
+.aboutUs{
+	margin: 0 auto;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	gap:3em;
+}

@@ -1,0 +1,143 @@
+
+
+.mainContent._dark{
+	background-color: #343334;
+	color:$test_color;
+
+
+	.logo ._hide{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.header{background-color: #333;}
+
+	.hamburger{
+		color: $white;
+	}
+
+	.s_intro{
+
+	  .main-title{color:$test_color;}
+	}
+
+	.btn{
+		background-color: $blue;
+		color:$test_color;
+		transition: 0.5s;
+		box-shadow: none;
+
+		&._shadow{
+			box-shadow: 0 0 0.2em 0.1em $pink, 0.5em 0.5em 0.8em 0.1em #7A50A4;
+		}
+
+
+		svg{fill: #fff;}
+
+		&:hover{
+			transition-delay: .5s;
+			background-color: #fff;
+			color:$blue;
+
+			svg{
+				transition-delay: .2s;
+				fill: $blue;
+			}
+		}
+
+	}
+
+	.hover-img-bg ._fix{border-color: #222;}
+
+	.s_about{
+	}
+
+
+	.sociasls {
+		a{background: $blue;}
+	}
+
+
+	.s_team{
+		.img_w{opacity: 1;}
+		.img_b{opacity: 0;}
+	}
+
+
+	.title._l{
+		background: none;
+		-webkit-background-clip: border-box;
+		-webkit-text-fill-color: currentcolor;
+		text-shadow: 0 0 0.2em;
+	}
+
+	.title._grad{
+
+		background: linear-gradient(to right, #8B79E9 0%, #D69FF0 50%, #DA7EB2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.telegram-block{
+		border-color: #fff;
+
+		svg{
+			z-index: 2;
+		}
+
+		&__btn{
+			svg{fill:#fff;}
+
+			&:hover svg{fill:$blue;}
+
+		}
+	}
+
+
+
+	.btn-theme{
+		background-color: $white;
+		color:$blue;
+
+		svg{
+			transform: scale(0) translate(-50%, -50%);
+		}
+
+		._sun{
+			transform: scale(1) translate(-50%, -50%);
+		}
+
+	}
+
+
+
+	/* bestiary */
+
+
+	.bestiary-list {
+		&::before, &::after{
+			opacity: 0.3;
+		}
+	}
+
+
+
+	/* lore */
+
+	.lore-first__logo{
+		background-image: url('../resources/icons/svg_2.svg');
+		background-repeat: no-repeat;
+		background-size: 150% 100%;
+		background-position: center;
+
+		@media (max-width: $tablet) {
+			background-size: contain;
+			width: 200%;
+		}
+
+		@media (max-width: $phone) {
+			background-size: contain;
+			width: 100%;
+		}
+	}
+
+}

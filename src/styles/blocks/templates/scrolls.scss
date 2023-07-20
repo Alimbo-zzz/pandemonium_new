@@ -1,0 +1,48 @@
+
+.scroll_1::-webkit-scrollbar-track{
+	border-radius: 100em;
+	background-color: transparent;
+}
+
+
+.scroll_1::-webkit-scrollbar
+{
+	width: 0.25em;
+	background-color: transparent;
+	height: 0.25em;
+}
+
+.scroll_1::-webkit-scrollbar-thumb
+{
+	border-radius: 100em;
+	background-color: rgba(66,66,66, 0.5);
+}
+
+
+// _________
+
+.scroll_tags::-webkit-scrollbar-track{
+	border-radius: 100em;
+	background-color: transparent;
+}
+
+
+.scroll_tags::-webkit-scrollbar
+{
+	width: 0.25em;
+	background-color: transparent;
+	height: 0.40em;
+
+	@media (max-width: $tablet) {
+		height: 0.25em;
+	}
+}
+
+.scroll_tags::-webkit-scrollbar-thumb
+{
+	border-radius: 100em;
+	background-color: rgba(187,186,183, 0.5);
+}
+
+
+// _________

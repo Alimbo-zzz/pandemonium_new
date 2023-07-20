@@ -1,0 +1,19 @@
+.page.FAQ{
+	.title{
+		text-align: center;
+		margin: 2em 0;
+	}
+	h4{font-size: 1.5em; text-transform: none;}
+	h5{font-size: 1.2em; text-transform: none;}
+	h6{font-size: 1em; text-transform: none;}
+	.text{
+		margin: 0.8em 0;
+		._bold{font-weight: bold;}
+
+		&._center{
+			text-align: center;
+			margin: 0.8em auto;
+			max-width: 45em;
+		}
+	}
+}

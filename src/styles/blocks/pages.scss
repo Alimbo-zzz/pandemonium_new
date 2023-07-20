@@ -1,0 +1,15 @@
+
+
+.mainContent{
+
+	.page-btns_home{display: block;}	
+	.page-btns_lore{display: block;}	
+	.page-btns_bestiary{display: block;}
+
+
+	&._page-base .page-btns_home{background: $blue; color: $white; pointer-events: none;}
+	&._page-game .page-btns_game{background: $blue; color: $white; pointer-events: none;}
+	&._page-lore .page-btns_lore{background: $blue; color: $white; pointer-events: none;}
+	&._page-bestiary .page-btns_bestiary{background: $blue; color: $white; pointer-events: none;}
+
+}
